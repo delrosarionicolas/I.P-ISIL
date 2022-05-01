@@ -1,0 +1,169 @@
+:root {
+    /* colors */
+    --first-color: #22223b;
+    --second-color: #4a4e69;
+    --third-color: #9a8c98;
+    --fourth-color: #c9ada7;
+    --fifth-color: #f2e9e4;
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #454545;
+    --gray-light: #999999;
+
+    /* font-size */
+    --sm: 1.4rem;
+    --md: 1.8rem;
+    --lg: 2.2rem;
+
+    /* font-family */
+    --roboto: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--roboto);
+}
+
+/* HEADER */
+#header {
+    background: linear-gradient(207.8deg, #201E1C 16.69%, var(--first-color) 100%);
+    height: 300px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    min-width: 360px;
+    text-align: center;
+    width: 100%;
+}
+
+.container .title {
+    color: var(--white);
+    font-size: var(--lg);
+    font-weight: 700;
+    line-height: 2.4;
+    padding: 10px 10px 25px 10px;
+}
+
+.container .subtitle {
+    color: var(--gray-light);
+    font-size: var(--md);
+    font-weight: 400;
+    line-height: 2;
+}
+
+/* HEADER COMPLETE */
+
+/* MAIN */
+#main {
+    height: auto;
+    width: 100%;
+}
+
+#main .container .title {
+    color: var(--second-color);
+    padding-top: 52px;
+}
+
+#main .container .subtitle {
+    padding-bottom: 52px;
+}
+
+#main .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 52px;
+}
+
+#main .main-container div {
+    max-width: 30%;
+    min-width: 300px;
+    padding: 20px;
+}
+
+#main .main-container div h3 {
+    color: var(--third-color);
+    font-size: var(--md);
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+#main .main-container-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#main .main-container-form label {
+    color: var(--gray);
+    font-size: var(--sm);
+    padding-bottom: 4px;
+}
+
+#main .main-container-form input {
+    border-radius: 8px;
+    border: 1px solid var(--gray-light);
+    color: var(--first-color);
+    height: 24px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+#main .main-container-form button {
+    align-self: center;
+    background: var(--first-color);
+    border-radius: 4px;
+    border: 1px solid var(--gray-light);
+    color: var(--white);
+    font-size: var(--sm);
+    height: 24px;
+    margin-top: 12px;
+    width: 80px;
+}
+
+#main .main-container-form p {
+    color: var(--third-color);
+    font-size: var(--md);
+    font-weight: 300;
+    padding-top: 16px;
+    text-align: center;
+}
+
+/* MAIN COMPLETE */
+
+/* FOOTER*/
+#footer {
+    background-color: var(--gray);
+    height: 80px;
+    width: 100%;
+}
+
+#footer div {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+#footer div h3 {
+    color: white;
+    font-size: var(--md);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* FOOTER COMPLETE */

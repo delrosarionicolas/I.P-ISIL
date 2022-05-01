@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimetro - figuras geométricas. </title>
+
+    <!-- FONT-FAMILY -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS-MOBILE -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- JS -->
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <h1 class="title">Perimetro De Las Figuras Geométricas</h1>
+            <p class="subtitle">Introducción a la programación - ISIL</p>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container">
+            <h2 class="title">Consigue el perímetro de la figura geométrica que desees</h2>
+            <p class="subtitle">Rellenando estos datos</p>
+        </div>
+        <section class="main-container">
+
+
+
+            <div>
+                <h3>Triángulo</h3>
+                <form class="main-container-form" action="">
+                    <label for="sideA">Lado A: </label>
+                    <input type="text" id="sideA">
+
+                    <label for="sideB">Lado B: </label>
+                    <input type="text" id="sideB">
+
+                    <label for="sideC">Lado C: </label>
+                    <input type="text" id="sideC">
+
+                    <button type="button" onclick="getValueInputTriangle()">Enviar</button>
+
+                    <p id="valueInputTriangle"></p>
+                </form>
+            </div>
+
+            <div>
+                <h3>Cuadrado</h3>
+                <form class="main-container-form" action="">
+                    <label for="sides">Lados: </label>
+                    <input type="text" id="sides">
+                    <button type="button" onclick="getValueInputSquare()">Enviar</button>
+                    <p id="valueInputSquare"></p>
+                </form>
+            </div>
+
+            <div>
+                <h3>Rectángulo</h3>
+                <form class="main-container-form" action="">
+                    <label for="sidesHorizontals">Lados horizontales:</label>
+                    <input type="text" id="sidesHorizontals">
+                    <label for="sidesVeticals">Lados verticales:</label>
+                    <input type="text" id="sidesVeticals">
+
+                    <button type="button" onclick="getValueInputRectangle()">Enviar</button>
+                    <p id="valueInputRectangle"></p>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer id="footer">
+        <div>
+            <h3>Gracias por la clase profesor</h3>
+        </div>
+    </footer>
+</body>
+
+</html>
