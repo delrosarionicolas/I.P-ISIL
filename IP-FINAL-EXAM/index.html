@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Class 7</title>
+    <style>
+      html {
+        background-color: #4158d0;
+        background-image: linear-gradient(
+          43deg,
+          #4158d0 0%,
+          #c850c0 46%,
+          #ffcc70 100%
+        );
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+
+      iframe {
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+      }
+
+      #main {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+      }
+
+      .main-left {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-left h1 {
+        font-weight: 700;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .main-right {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-right h2 {
+        font-weight: 500;
+        font-size: 40px;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .main-right div {
+        display: flex;
+        width: 80%;
+        justify-content: space-evenly;
+      }
+
+      .main-right div button {
+        border: 1px solid white;
+        padding: 6px;
+        background: transparent;
+        color: white;
+        border-radius: 5px;
+        transition: all 0.8s ease-in-out;
+        cursor: pointer;
+      }
+
+      .main-right div button:hover {
+        background: black;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      function mostrarCategorias() {
+        // document.getElementById("content").src =
+        //   " https://www.youtube.com/embed/C3aY6wcMJnw ";
+        document.getElementById("content").src = "./part_one.html";
+      }
+
+      function mostrarProductos() {
+        // document.getElementById("content").src =
+        //   " https://www.youtube.com/embed/hMS8RtYVouc ";
+        document.getElementById("content").src = "./part_two.html";
+      }
+
+      function mostrarPedidos() {
+        // document.getElementById("content").src =
+        //   " https://asisebaila.com/wp-content/uploads/2019/09/bailar-salsa-en-linea.jpg ";
+        document.getElementById("content").src = "./part_three.html";
+      }
+
+      function mostrarVideo() {
+        document.getElementById("content").src =
+          " https://www.youtube.com/embed/C3aY6wcMJnw ";
+      }
+
+      function mostrarInicio() {
+        location.reload();
+      }
+    </script>
+
+    <main id="main">
+      <div class="main-left">
+        <h1>Fuentes de música</h1>
+        <iframe
+          id="content"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/C3aY6wcMJnw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="main-right">
+        <h2>Canciones</h2>
+        <div>
+          <button onclick="mostrarCategorias()">Categorias</button>
+          <button onclick="mostrarProductos()">Productos</button>
+          <button onclick="mostrarPedidos()">Pedidos</button>
+          <button onclick="mostrarVideo()">Video Promocional</button>
+          <button onclick="mostrarInicio()">Inicio</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

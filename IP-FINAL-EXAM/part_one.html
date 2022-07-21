@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Kinds</title>
+    <!-- FONT FAMILY - POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --first-color: #111215;
+            --second-color: #18191d;
+            --black: #000000;
+            --white: #ffffff;
+            --gradient: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+            /* FONT FAMILY */
+            --poppins: "Poppins", sans-serif;
+        }
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        html {
+            font-family: var(--poppins);
+            font-size: 62.5%;
+        }
+
+        body {
+            background: var(--first-color);
+            height: 100vh;
+            width: 100vw;
+            color: var(--white);
+        }
+
+        .main-content {
+            padding: 50px 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        .main-content .center-content {
+            height: auto;
+            margin: 0 auto 40px auto;
+            min-width: 350px;
+            max-width: 700px;
+            padding: 0 10px;
+        }
+
+        .center-content .subtitle {
+            font-weight: 300;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        .center-content .title {
+            font-size: 2rem;
+            font-weight: 500;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .services .services-content {
+            height: auto;
+            min-width: 90%;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+        }
+
+        .services-content-p {
+            line-height: 1em;
+            margin-bottom: 10px;
+            font-size: 2.4rem;
+            font-weight: 500;
+        }
+
+        .services .services-content .services-content-img {
+            width: 200px;
+            margin: 30px auto 0;
+        }
+
+        .services .services-content .services-content-img img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .btn {
+            width: 180px;
+            height: 50px;
+            margin: 50px auto 0;
+            border-radius: 4px;
+            text-align: justify;
+        }
+
+        .btn button {
+            background: transparent;
+            color: var(--white);
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.5s ease;
+        }
+
+        .btn button:hover {
+            transition: 1s;
+            background: var(--white);
+            color: var(--first-color);
+        }
+
+        @media (min-width: 1024px) {
+            .center-content .title {
+                font-size: 4.8rem;
+            }
+
+            .center-content .subtitle {
+                font-size: 1.7rem;
+                letter-spacing: 7px;
+            }
+
+            .services .services-content {
+                min-width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert(
+            "Hi, I hope you are having a good day. Today you will choose what kind of music do you want to hear in this moment"
+        );
+
+        function ask(ANSWER) {
+            switch (ANSWER) {
+                case "1":
+                    alert("You choose Rock and roll");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/7239910/pexels-photo-7239910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Rock. Have a good day</h2> ";
+                    break;
+                case "2":
+                    alert("You choose Pop");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/9524941/pexels-photo-9524941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Pop. Have a good day</h2> ";
+                    break;
+                case "3":
+                    alert("You choose Rap");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/4061510/pexels-photo-4061510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Rap. Have a good day</h2> ";
+                    break;
+                case "4":
+                    alert("You choose Salsa");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/1844040/pexels-photo-1844040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Salsa. Have a good day</h2> ";
+                    break;
+                case "5":
+                    alert("You choose Blues");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/4786234/pexels-photo-4786234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Blues. Have a good day</h2> ";
+                    break;
+                case "6":
+                    alert("You choose Electronic");
+                    document.getElementById("alternatives").innerHTML =
+                        ' <img width="200px" src="https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" ' +
+                        " <h2>You choose Electronic. Have a good day</h2> ";
+                    break;
+                // case "7":
+                //     newAnswer = prompt("Which of these types of music do you want to hear?");
+
+                //     function ask(newAnswer)
+                //     break
+                default:
+                    alert('Try again')
+                    break;
+            }
+        }
+
+        function btn() {
+            location.reload();
+        }
+    </script>
+
+    <section class="main-content">
+        <div class="center-content">
+            <p class="subtitle">MUSIC KINDS</p>
+            <h1 class="title">What kind of music do you want to listen?.</h1>
+        </div>
+        <div id="alternatives" class="services">
+            <div class="services-content">
+                <p class="services-content-p">(1)Rock</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('1')"
+                        src="https://images.pexels.com/photos/7239910/pexels-photo-7239910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Rock" />
+                </figure>
+            </div>
+
+            <div class="services-content">
+                <p class="services-content-p">(2)Pop</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('2')"
+                        src="https://images.pexels.com/photos/9524941/pexels-photo-9524941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Pop" />
+                </figure>
+            </div>
+
+            <div class="services-content">
+                <p class="services-content-p">(3)Rap</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('3')"
+                        src="https://images.pexels.com/photos/4061510/pexels-photo-4061510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Rap" />
+                </figure>
+            </div>
+
+            <div class="services-content">
+                <p class="services-content-p">(4)Salsa</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('4')"
+                        src="https://images.pexels.com/photos/1844040/pexels-photo-1844040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Salsa" />
+                </figure>
+            </div>
+
+            <div class="services-content">
+                <p class="services-content-p">(5)Blues</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('5')"
+                        src="https://images.pexels.com/photos/4786234/pexels-photo-4786234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Blues" />
+                </figure>
+            </div>
+
+            <div class="services-content">
+                <p class="services-content-p">(6)Electronic</p>
+                <figure class="services-content-img">
+                    <img onclick="ask('6')"
+                        src="https://images.pexels.com/photos/2350325/pexels-photo-2350325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Electronic" />
+                </figure>
+            </div>
+        </div>
+
+        <div class="btn" href="">
+            <button onclick="btn()">
+                Choose the music that you want to listen right now
+            </button>
+        </div>
+    </section>
+</body>
+
+</html>

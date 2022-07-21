@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Gallery</title>
+    <style>
+        :root {
+            --primary-color: #111215;
+            --secondary-color: #12c2e9;
+            --third-color: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+            --white: #fff;
+            --black: #000;
+        }
+
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        html {
+            background-color: var(--primary-color);
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            color: var(--secondary-color);
+            margin: 30px 0;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--white);
+        }
+
+        section {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+        img {
+            width: 400px;
+            height: 240px;
+        }
+
+        section div {
+            text-align: center;
+        }
+
+        section div button {
+            margin: 20px 20px 0 0;
+            background-color: transparent;
+            color: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.8s ease-in-out;
+            cursor: pointer;
+            width: 96px;
+        }
+
+        section div button:hover {
+            color: var(--primary-color);
+            background-color: var(--white);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        let i = 1;
+
+
+        function previus() {
+            i--;
+            if (i < 1) {
+                i = 4;
+            }
+            document.getElementById("images").innerHTML = BANDS[i];
+        }
+
+        function next() {
+            i++;
+            if (i > 4) {
+                i = 1;
+            }
+            document.getElementById("images").innerHTML = BANDS[i];
+        }
+
+        const MODA =
+            ' <img src="https://static1.eldiariomontanes.es/www/multimedia/202108/03/media/cortadas/La%20M.O.D.A.%20Foto%20x%20Laura%20Sister%c3%b3%204-kjHF-RElLfyWxflSkSZ7jytp9fEJ-624x385@Diario%20Montanes.jpg" alt="Photo"> '
+        const PXNDX =
+            ' <img src="https://imagenes.razon.com.mx/files/image_940_470/uploads/2020/09/11/5f5c36f79bc62.jpeg" alt="Photo"> '
+        const TOP =
+            ' <img src="https://media.meer.com/attachments/4fcf8cf266a7c9c8e8dde2c9adbef68afbfd1bda/store/fill/1470/827/d190772f7460391a23172c6ebbf22b254171ff319c25c8dcf67c346e180d/Twenty-One-Pilots.jpg" alt="Photo"> '
+        const ARTIC_MOKEYS =
+            ' <img src="https://larepublica.pe/resizer/zy7pdeFC97UwhkTEbmcJG2ZKCNI=/1250x735/top/smart/cloudfront-us-east-1.images.arcpublishing.com/gruporepublica/GWA6KS4LKNHX3PHNR4E6ASSD5E.jpg" alt="Photo"> '
+
+        const BANDS = ['BANDS', MODA, PXNDX, TOP, ARTIC_MOKEYS]
+    </script>
+
+    <header>
+        <h1>Music Gallery</h1>
+        <p>By Nicolas Del Rosario</p>
+    </header>
+    <main>
+        <section>
+            <figure id="images">
+                <img src="https://static1.eldiariomontanes.es/www/multimedia/202108/03/media/cortadas/La%20M.O.D.A.%20Foto%20x%20Laura%20Sister%c3%b3%204-kjHF-RElLfyWxflSkSZ7jytp9fEJ-624x385@Diario%20Montanes.jpg"
+                    alt="Photo">
+            </figure>
+            <div>
+                <button onclick="previus()">Previous</button>
+                <button onclick="next()">Next</button>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
