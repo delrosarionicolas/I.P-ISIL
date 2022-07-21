@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>03 CREANDO UNA GALERÍA CON UN ARREGLO</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	
+		h1 {
+
+			color: green;
+
+		}
+
+		div {
+
+			text-align: center;
+
+		}
+
+		img {
+			width: 330px;
+			height: 230px;
+		}
+
+
+	</style>
+
+
+
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+var i=1;
+
+
+
+function Siguiente() {
+	i++;
+	if (i>4) {
+		alert("Este el último plato de fondo del menú del día");
+		i=4;
+	}
+	document.getElementById("Imagenes").innerHTML = MENU[i];
+}
+
+function Anterior() {
+	i--;
+	if (i<1) {
+		alert("Este el Primer plato de fondo del menú del día");
+		i=1;
+	}
+	document.getElementById("Imagenes").innerHTML = MENU[i];
+}
+
+var ARROZ_CON_POLLO = ' <img src="https://www.recetips.com/uploads/recetas_ce89af3170d309eea9addbf67a3bc639.jpg"> ';
+var LOMO_SALTADO = ' <img src="https://www.comida-peruana.com/base/stock/Recipe/32-image/32-image_web.jpg"> ';
+var SOPA_SECA = ' <img src="https://imgmedia.wapa.pe/1200x660/wapa/migration/imagen/2019/07/04/noticia-1562251851-portada-carapulcra-con-sopa-seca.png"> ';
+var CEVICHE = ' <img src="https://recetaparahoy.com/wp-content/uploads/2017/06/ceviche-peruano.jpg"> ';
+
+
+var MENU = [ 'PLATOS DE FONDO',ARROZ_CON_POLLO, LOMO_SALTADO, SOPA_SECA, CEVICHE ];
+
+</script>
+<div id="Titulos">
+	<h1>Creando una Galería de imágenes </h1>
+</div>
+
+<div id="Imagenes">
+	<img src="https://www.recetips.com/uploads/recetas_ce89af3170d309eea9addbf67a3bc639.jpg">
+</div>
+
+<br><br>
+
+<div id="Botones">
+	<button onclick="Anterior()">ANTERIOR</button>
+	<button onclick="Siguiente()">SIGUIENTE</button>
+</div>
+
+</body>
+
+</html>

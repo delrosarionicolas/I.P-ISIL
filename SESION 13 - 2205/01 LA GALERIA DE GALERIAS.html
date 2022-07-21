@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>01 LA GALERÍA DE GALERÍAS</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		img {
+			width: 700px;
+			height: 474px;
+		}
+		button {
+			width: 200px;
+			margin: 8px 2px;
+			padding: 5px 5px;
+			background-color: orange;
+			font-size: 22px;
+			color: white;
+			cursor: pointer;
+		}
+		#Principal {
+			display: flex;
+			flex-direction: row;
+		}
+		div {
+			text-align: center;
+		}
+		h1 {
+			color: white;
+		}
+		#Botones {
+			background-color: red;
+			width: 370px;
+		}
+		#Visor {
+			background-color: green;
+			width: 1000px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function Recargar_Inicio() {
+			location.reload();
+		}
+		function Mostrar_Video() {
+			document.getElementById("Pantalla").src = ' https://www.youtube.com/embed/-fqA2croG6g ';
+		}
+		function Mostrar_HTML() {
+			document.getElementById("Pantalla").src = ' GALERIA.html ';
+		}
+		function Mostrar_Web() {
+			document.getElementById("Pantalla").src = ' https://www.yanuq.com/ ';
+		}
+		function Mostrar_Imagen() {
+			document.getElementById("Pantalla").src =
+				' https://www.lima2019.pe/sites/default/files/inline-images/preview-gallery-005_0.jpg ';
+		}
+	</script>
+
+	<div id="Principal">
+		<div id="Visor">
+			<h1>La Galería de las Fuentes de Información</h1>
+			<iframe id="Pantalla" width="700" height="474" src="https://www.youtube.com/embed/cHEYrxZ2dZw"
+				title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+		<div id="Botones">
+			<h1>TABLA DE CONTENIDOS</h1>
+			<button onclick="Mostrar_Imagen()">Una Imagen</button>
+			<button onclick="Mostrar_Web()">Una Página Web</button>
+			<button onclick="Mostrar_HTML()">Un Archivo HTML</button>
+			<button onclick="Mostrar_Video()">Un VIDEO</button>
+			<button onclick="Recargar_Inicio()">INICIO</button>
+		</div>
+	</div>
+</body>
+</html>
